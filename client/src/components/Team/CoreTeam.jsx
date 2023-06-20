@@ -170,26 +170,26 @@ const CoreTeam = () => {
   ];
 
   return (
-    <div className="bg-[#252b42]">
-      <h1 className="text-center text-5xl p-10 text-[#fff]">
-        Meet the Web Team
+    <div className="bg-[#EEEEEE] ">
+      <h1 className="text-center text-5xl p-10 text-[#295C7A]">
+        Meet the Core Team
       </h1>
       <div>
-        <div className="flex justify-center items-center flex-wrap gap-x-32 gap-y-8 px-10 pb-10 mt-4">
+        <div className="flex justify-center items-center flex-wrap gap-x-32 pb-10 gap-y-8 px-10">
           {coreTeamDetails.map((details, ind) => (
             <div className="flex flex-col items-center gap-4">
               <div className="relative">
                 <img
                   src={details.imgLink}
                   alt={details.name}
-                  className="rounded-full mx-auto  w-48 h-48"
+                  className="rounded-full mx-auto  w-44 h-44 "
                 />
                 <button
                   onClick={() => {
                     setShow(true);
                     setCurrentInd(ind);
                   }}
-                  className="absolute bottom-4 right-[-3px] rounded-full py-[6px] px-[15px] bg-transparent"
+                  className="absolute bottom-4 right-[-3px] rounded-full py-[6px] px-[15px] bg-transparent "
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -204,10 +204,8 @@ const CoreTeam = () => {
                 </button>
               </div>
               <div>
-                <p className="text-center font-bold text-[#fff]">
-                  {details.name}
-                </p>
-                <p className="text-center text-[#fff]">{details.designation}</p>
+                <p className="text-center font-bold">{details.name}</p>
+                <p className="text-center">{details.designation}</p>
               </div>
             </div>
           ))}
